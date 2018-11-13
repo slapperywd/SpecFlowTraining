@@ -100,6 +100,55 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        public virtual void VerifyAllTabsOnHeader(string tabname, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify all tabs on header", exampleTags);
+#line 10
+this.ScenarioSetup(scenarioInfo);
+#line 11
+ testRunner.Given("I navigate to home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 12
+ testRunner.Then(string.Format("I verify there is a tab on the header with name {0}", tabname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify all tabs on header: Почта")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "TutbyMainPage")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Почта")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:tabname", "Почта")]
+        public virtual void VerifyAllTabsOnHeader_Почта()
+        {
+#line 10
+this.VerifyAllTabsOnHeader("Почта", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify all tabs on header: Работа")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "TutbyMainPage")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Работа")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:tabname", "Работа")]
+        public virtual void VerifyAllTabsOnHeader_Работа()
+        {
+#line 10
+this.VerifyAllTabsOnHeader("Работа", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Verify all tabs on header: Магазины")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "TutbyMainPage")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Магазины")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:tabname", "Магазины")]
+        public virtual void VerifyAllTabsOnHeader_Магазины()
+        {
+#line 10
+this.VerifyAllTabsOnHeader("Магазины", ((string[])(null)));
+#line hidden
+        }
     }
 }
 #pragma warning restore

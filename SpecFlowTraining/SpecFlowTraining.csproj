@@ -69,6 +69,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TutbyMainPage.feature</DependentUpon>
     </Compile>
+    <Compile Include="Hooks1.cs" />
     <Compile Include="Steps\TutbyMainPageSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -31,6 +31,19 @@ namespace SpecFlowTraining.Steps
             Assert.IsTrue(driver.Title.Equals(homePageTitle));
         }
 
+        [Then(@"I verify there is a tab on the header with name (.*)")]
+        public void ThenIVerifyThereIsATabOnTheHeaderWithName(string tabName)
+        {
+            Assert.IsTrue(driver.FindElement(By.XPath(string.Format("//li[@class='topbar__li']/a[text()='{0}']", tabName))).Displayed);  
+            
+        }
+
+        //[AfterStep]
+        //public void AfterStep()
+        //{
+        //    Console.WriteLine("Step INFO" + ScenarioContext.Current.StepContext.StepInfo.Text);
+        //}
+
         [AfterScenario]
         public void AfterScenario()
         {
