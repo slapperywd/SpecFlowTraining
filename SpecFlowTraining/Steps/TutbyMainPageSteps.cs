@@ -1,13 +1,14 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using TechTalk.SpecFlow;
 
 namespace SpecFlowTraining.Steps
 {
+    using NUnit.Framework;
+
     [Binding]
     public class TutbyMainPageSteps
     {
@@ -34,10 +35,9 @@ namespace SpecFlowTraining.Steps
         [Then(@"I verify there is a tab on the header with name (.*)")]
         public void ThenIVerifyThereIsATabOnTheHeaderWithName(string tabName)
         {
-            Assert.IsTrue(driver.FindElement(By.XPath(string.Format("//li[@class='topbar__li']/a[text()='{0}']", tabName))).Displayed);  
-            
+            Assert.IsTrue(driver.FindElement(By.XPath(string.Format("//li[@class='topbar__li']/a[text()='{0}']", tabName))).Displayed);           
         }
-
+        
         //[AfterStep]
         //public void AfterStep()
         //{
