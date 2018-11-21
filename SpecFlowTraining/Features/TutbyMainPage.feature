@@ -12,7 +12,7 @@ Scenario Outline: Verify all tabs on header
 	Then I verify there is a tab on the header with name <tabname>
 
 Examples: 
-|tabname|
-|Почта|
-|Работа|
-|Магазины|
+| tabname  |
+| Почта    |
+| Работа   |
+| Магазины | 
