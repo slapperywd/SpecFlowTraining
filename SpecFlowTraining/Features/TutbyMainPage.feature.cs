@@ -72,11 +72,11 @@ namespace SpecFlowTraining.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify all sections are present")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
+        [NUnit.Framework.CategoryAttribute("tutby")]
         public virtual void VerifyAllSectionsArePresent()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify all sections are present", null, new string[] {
-                        "mytag"});
+                        "tutby"});
 #line 6
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -90,18 +90,25 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Verify all tabs on header")]
+        [NUnit.Framework.CategoryAttribute("tutby-datadriven")]
         [NUnit.Framework.TestCaseAttribute("Почта", null)]
         [NUnit.Framework.TestCaseAttribute("Работа", null)]
         [NUnit.Framework.TestCaseAttribute("Магазины", null)]
         public virtual void VerifyAllTabsOnHeader(string tabname, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify all tabs on header", null, exampleTags);
-#line 10
+            string[] @__tags = new string[] {
+                    "tutby-datadriven"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify all tabs on header", null, @__tags);
+#line 11
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 11
- testRunner.Given("I navigate to home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 12
+ testRunner.Given("I navigate to home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 13
  testRunner.Then(string.Format("I verify there is a tab on the header with name {0}", tabname), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

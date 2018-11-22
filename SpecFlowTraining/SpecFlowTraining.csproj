@@ -62,17 +62,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base\WebDriverHooks.cs" />
+    <Compile Include="Features\ScopedScenarios.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScopedScenarios.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\TutbyMainPage.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>TutbyMainPage.feature</DependentUpon>
     </Compile>
-    <Compile Include="Hooks1.cs" />
+    <Compile Include="Steps\BaseTutbyMainPageSteps.cs" />
+    <Compile Include="Steps\ScopedScenariosSteps.cs" />
     <Compile Include="Steps\TutbyMainPageSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Features\ScopedScenarios.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ScopedScenarios.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\TutbyMainPage.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>TutbyMainPage.feature.cs</LastGenOutput>

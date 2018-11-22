@@ -7,10 +7,12 @@ using TechTalk.SpecFlow;
 
 namespace SpecFlowTraining.Steps
 {
+    using System.Linq;
+
     using NUnit.Framework;
 
     [Binding]
-    public class TutbyMainPageSteps
+    public class TutbyMainPageSteps : BaseTutbyMainPageSteps
     {
         private IWebDriver driver = new ChromeDriver();
 
@@ -44,10 +46,17 @@ namespace SpecFlowTraining.Steps
         //    Console.WriteLine("Step INFO" + ScenarioContext.Current.StepContext.StepInfo.Text);
         //}
 
-        [AfterScenario]
+        [AfterScenario("tutby, tutby-datadriven")]
         public void AfterScenario()
         {
             driver.Quit();
         }
+
+        //[BeforeScenario]
+        //public void BeforeScenario()
+        //{
+        //    Console.WriteLine($"TAGS COUNT : {ScenarioContext.Current.ScenarioInfo.Tags.Length}");
+        //    ScenarioContext.Current.ScenarioInfo.Tags.ToList().ForEach(s => Console.WriteLine(s));
+        //}
     }
 }
