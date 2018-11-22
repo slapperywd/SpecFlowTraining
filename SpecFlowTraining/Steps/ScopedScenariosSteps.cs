@@ -13,12 +13,11 @@
     [Binding]
     public class ScopedScenariosSteps
     {
-        private readonly IObjectContainer objectContainer;
-        private IWebDriver driver;
+        private readonly IWebDriver driver;
 
         public ScopedScenariosSteps(IObjectContainer objectContainer)
         {
-            this.objectContainer = objectContainer;
+           // this.objectContainer = objectContainer;
             this.driver = objectContainer.Resolve<IWebDriver>();
         }
 

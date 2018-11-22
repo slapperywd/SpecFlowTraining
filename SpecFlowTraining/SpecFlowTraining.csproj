@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\WebDriverHooks.cs" />
+    <Compile Include="Driver.cs" />
     <Compile Include="Features\ScopedScenarios.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
