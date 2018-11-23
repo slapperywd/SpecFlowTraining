@@ -17,7 +17,6 @@
 
         public ScopedScenariosSteps(IObjectContainer objectContainer)
         {
-           // this.objectContainer = objectContainer;
             this.driver = objectContainer.Resolve<IWebDriver>();
         }
 

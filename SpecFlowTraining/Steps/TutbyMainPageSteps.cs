@@ -46,7 +46,7 @@ namespace SpecFlowTraining.Steps
         //    Console.WriteLine("Step INFO" + ScenarioContext.Current.StepContext.StepInfo.Text);
         //}
 
-        [AfterScenario("tutby, tutby-datadriven")]
+        [AfterScenario("tutby", "tutby-datadriven")]
         public void AfterScenario()
         {
             driver.Quit();

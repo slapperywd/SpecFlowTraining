@@ -45,7 +45,7 @@
 
             // Output any screenshots or log dumps etc
 
-            webDriver.Close();
+            webDriver.Quit();
             webDriver.Dispose();
         }
     }
