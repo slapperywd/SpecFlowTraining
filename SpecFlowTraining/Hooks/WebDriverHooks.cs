@@ -34,14 +34,14 @@
         {
             Console.WriteLine("Setting up a web driver ... ");
             var webdriver = SetupWebDriver();
-            objectContainer.RegisterInstanceAs(webdriver);
+            objectContainer.RegisterInstanceAs(webdriver, "ChromeDriver");
         }
 
         [AfterScenario("Ui")]
         public void AfterScenario()
         {
             Console.WriteLine("Closing a web driver ... ");
-            var webDriver = this.objectContainer.Resolve<IWebDriver>();
+            var webDriver = this.objectContainer.Resolve<IWebDriver>("ChromeDriver");
 
             // Output any screenshots or log dumps etc
 

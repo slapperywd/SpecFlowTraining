@@ -1,35 +1,30 @@
-﻿namespace SpecFlowTraining.Steps
+﻿using SpecFlowTraining.Steps.Base;
+
+namespace SpecFlowTraining.Steps
 {
     using BoDi;
 
     using NUnit.Framework;
 
-    using OpenQA.Selenium;
-
-    using SpecFlowTraining.Base;
-
     using TechTalk.SpecFlow;
 
     [Binding]
-    public class ScopedScenariosSteps
+    public class ScopedScenariosSteps : BaseUiSteps
     {
-        private readonly IWebDriver driver;
-
-        public ScopedScenariosSteps(IObjectContainer objectContainer)
+        public ScopedScenariosSteps(IObjectContainer objectContainer) : base(objectContainer)
         {
-            this.driver = objectContainer.Resolve<IWebDriver>();
         }
 
         [Given(@"I navigate to codewars homepage")]
         public void GivenINavigateToCodewarsHomepage()
         {
-            this.driver.Navigate().GoToUrl("https://www.codewars.com/");
+            Driver.Navigate().GoToUrl("https://www.codewars.com/");
         }
 
         [Then(@"home page title is Train with Programming Challenges/Kata \| Codewars")]
         public void ThenHomePageTitleIsTrainWithProgrammingChallengesKataCodewars()
         {
-            Assert.IsTrue(this.driver.Title.Equals("Train with Programming Challenges/Kata | Codewars"));
+            Assert.IsTrue(Driver.Title.Equals("Train with Programming Challenges/Kata | Codewars"));
         }
     }
 }
